@@ -33,6 +33,7 @@ nav{
 }
 .logo{font-weight:800;color:var(--primary);font-size:1.15rem}
 .menu{display:flex;gap:22px;align-items:center}
+.menu{margin-left:auto}
 .menu a{color:var(--muted);text-decoration:none;font-weight:600}
 .menu a:hover{color:var(--primary)}
 #hamburger{display:none;cursor:pointer}
