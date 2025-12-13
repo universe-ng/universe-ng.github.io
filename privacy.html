@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy – UniVerse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">UniVerse</div>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header><h1>Privacy Policy</h1></header>
+  <div class="container">
+    <main>
+      <div class="card" style="max-width:820px;margin:40px auto;">
+        <p><strong>Last updated:</strong> 25 November 2025</p>
+       <p>We collect only what's needed to verify you're a real student. No tracking. No ads. No selling data.</p>
+        <ul>
+          <li>Email or phone number only if you choose to log in (anonymous mode coming soon)</li>
+          <li>Chat messages are stored securely on Google Firebase</li>
+          <li>No analytics, no tracking, no third-party ads</li>
+          <li>We will never sell or share your data</li>
+        </ul>
+        <p>Contact: <a href="mailto:batako11@gmail.com" style="color:var(--green);">batako11@gmail.com</a></p>
+      </div>
+    </main>
+  </div>
+
+  <footer>© 2025 Udus Forum • Made with ❤️ by a UDUS student</footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
+    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+  </script>
+</body>
+</html>

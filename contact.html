@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – UniVerse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">UniVerse</div>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header><h1>Contact</h1></header>
+  <div class="container">
+    <main>
+      <div class="card" style="max-width:720px;margin:0 auto;">
+        <p>Email: <a href="mailto:devbtk02@email.com" class="btn">devbtk02@email.com</a></p>
+        <p>Telegram group coming after launch</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>© 2025 Udus Forum • Made with ❤️ by a UDUS student</footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
+    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+  </script>
+</body>
+</html>

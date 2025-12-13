@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – UniVerse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">UniVerse</div>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header><h1>About UniVerse</h1></header>
+  <div class="container">
+    <main>
+      <div class="card" style="max-width:820px;margin:0 auto;">
+        <p>UniVerse was built by Nigerian university students who were tired of:</p>
+        <ul style="margin:20px 0;">
+          <li>Outsiders in campus groups</li>
+          <li>Lecturers spying on WhatsApp</li>
+          <li>Dead Facebook pages and scattered chats</li>
+          <li>Apps full of ads and fake users</li>
+        </ul>
+        <p>We made something better: a private social app <strong>only for verified university students</strong>.</p>
+        <p>Starting with UDUS and BUK — expanding to all Nigerian universities soon.</p>
+        <h2 style="color:var(--accent);margin:30px 0 16px;">What makes UniVerse different</h2>
+        <ul>
+          <li>100% campus-only — no outsiders ever</li>
+          <li>Anonymous posting available</li>
+          <li>Channels for everything: memes, confessions, academics</li>
+          <li>Stories that disappear in 24 hours</li>
+          <li>No ads. No data selling. No nonsense.</li>
+        </ul>
+        <p style="margin-top:30px;">Made with ❤️ by students, for students.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>© 2025 UniVerse • Made with ❤️ in Nigeria</footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
+    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+  </script>
+</body>
+</html>
