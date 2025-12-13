@@ -1,8 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.example.uni_verse",
-    "sha256_cert_fingerprints": ["14:6D:E9:83:F3:46:6F:34:9B:AF:A3:4F:BE:06:04:1E:A5:67:7A:82:3E:4C:8C:92:82:8A:0B:01:2D:34:56"]
-  }
-}]
