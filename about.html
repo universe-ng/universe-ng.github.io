@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About – UniVerse</title>
+  <meta name="description" content="Learn about UniVerse, a campus-focused social platform built by Nigerian university students for university communities.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav>
     <div class="container">
-      <div class="logo">UniVerse</div>
+      <div class="logo">
+       <img src="img/logo/universe-logo.svg" alt="UniVerse logo">
+      </div>
+
       <div class="menu" id="menu">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="download.html">Download</a>
         <a href="privacy.html">Privacy</a>
         <a href="contact.html">Contact</a>
@@ -21,37 +25,70 @@
     </div>
   </nav>
 
-  <header><h1>About UniVerse</h1></header>
+  <header>
+    <h1>About UniVerse</h1>
+    <p class="subtitle">A campus-focused social platform built by students</p>
+  </header>
+
   <div class="container">
     <main>
       <div class="card" style="max-width:820px;margin:0 auto;">
-        <p>UniVerse was built by Nigerian university students who were tired of:</p>
-        <ul style="margin:20px 0;">
-          <li>Outsiders in campus groups</li>
-          <li>Lecturers spying on WhatsApp</li>
-          <li>Dead Facebook pages and scattered chats</li>
-          <li>Apps full of ads and fake users</li>
-        </ul>
-        <p>We made something better: a private social app <strong>only for verified university students</strong>.</p>
-        <p>Starting with UDUS and BUK — expanding to all Nigerian universities soon.</p>
-        <h2 style="color:var(--accent);margin:30px 0 16px;">What makes UniVerse different</h2>
+
+        <p>
+          UniVerse is a campus-focused social platform created by Nigerian
+          university students to support meaningful communication within
+          university communities.
+        </p>
+
+        <p style="margin:20px 0;">
+          Many students currently rely on general social networks that are not
+          designed around campus life. This often leads to fragmented
+          discussions, limited relevance, and concerns around privacy and
+          community control.
+        </p>
+
+        <p>
+          UniVerse was developed to provide a more focused environment where
+          students can interact around shared academic spaces, interests, and
+          campus experiences.
+        </p>
+
+        <h2 style="color:var(--accent);margin:30px 0 16px;">Platform principles</h2>
+
         <ul>
-          <li>100% campus-only — no outsiders ever</li>
-          <li>Anonymous posting available</li>
-          <li>Channels for everything: memes, confessions, academics</li>
-          <li>Stories that disappear in 24 hours</li>
-          <li>No ads. No data selling. No nonsense.</li>
+          <li>Participation centered around individual university communities</li>
+          <li>Optional anonymous posting for selected features</li>
+          <li>Topic-based channels for academics and student life</li>
+          <li>Stories for short-lived, casual sharing</li>
+          <li>Designed with student privacy and simplicity in mind</li>
         </ul>
-        <p style="margin-top:30px;">Made with ❤️ by students, for students.</p>
+
+        <p style="margin-top:30px;">
+          UniVerse is currently being piloted in selected universities, with
+          gradual expansion planned to additional campuses over time.
+        </p>
+
+        <p style="margin-top:20px; color: var(--muted);">
+          Built by students, shaped by campus needs.
+        </p>
+
       </div>
     </main>
   </div>
 
-  <footer>© 2025 UniVerse • Made with ❤️ in Nigeria</footer>
+  <footer>
+    © 2025 UniVerse • Campus Social Platform • Nigeria
+  </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
-    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+    document.getElementById('hamburger').addEventListener('click', () =>
+      document.getElementById('menu').classList.toggle('active')
+    );
+    document.querySelectorAll('.menu a').forEach(a =>
+      a.addEventListener('click', () =>
+        document.getElementById('menu').classList.remove('active')
+      )
+    );
   </script>
 </body>
 </html>

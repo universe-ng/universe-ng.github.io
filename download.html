@@ -9,7 +9,9 @@
 <body>
   <nav>
     <div class="container">
-      <div class="logo">UniVerse</div>
+     <div class="logo">
+       <img src="img/logo/universe-logo.svg" alt="UniVerse logo">
+     </div>
       <div class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -21,27 +23,50 @@
     </div>
   </nav>
 
-  <header><h1>Download UniVerse</h1></header>
-  <div class="container">
-    <main>
-      <div class="box" style="max-width:760px;margin:40px auto;text-align:center;">
-        <h2 style="color:var(--accent);">Latest Version</h2>
-        <p><strong>v1.0.0</strong> • ~58 MB • December 2025</p>
-        <p style="margin:20px 0;">First official release — feed, stories, channels, profiles</p>
-        <a href="universe-v1.apk" class="btn hero-btn">Download UniVerse v1</a>
-        <p style="color:var(--muted);margin-top:24px;">
-          Safe & direct download • No Play Store required<br>
-          Enable "Install from unknown sources" in settings
-        </p>
-      </div>
-    </main>
+  <header>
+    <h1>Download UniVerse</h1>
+  </header>
+
+  <div class="box" style="max-width:760px;margin:40px auto;text-align:center;">
+    <h2 style="color:var(--accent);">Early Access Release</h2>
+
+    <p>
+      <strong>Version 1.0.0</strong> • ~58&nbsp;MB • December&nbsp;2025
+    </p>
+
+    <p style="margin:20px 0;">
+      This is the initial public release of UniVerse, providing core features
+      such as the campus feed, stories, discussion channels, and user profiles.
+    </p>
+
+    <a href="downloads/universe-v1.apk" class="btn hero-btn">
+      Download UniVerse APK
+    </a>
+
+    <p style="color:var(--muted);margin-top:24px;">
+      UniVerse is currently distributed directly as part of an early rollout.
+      Availability on the Google Play Store is planned for a later phase.
+    </p>
+
+    <p style="color:var(--muted);margin-top:12px;font-size:0.95rem;">
+      Depending on your device settings, you may be prompted to allow app
+      installation from external sources.
+    </p>
   </div>
 
-  <footer>© 2025 UniVerse • Made with ❤️ in Nigeria</footer>
+  <footer>
+    © 2025 UniVerse • Made with ❤️ in Nigeria
+  </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
-    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+    document.getElementById('hamburger').addEventListener('click', () =>
+      document.getElementById('menu').classList.toggle('active')
+    );
+    document.querySelectorAll('.menu a').forEach(a =>
+      a.addEventListener('click', () =>
+        document.getElementById('menu').classList.remove('active')
+      )
+    );
   </script>
 </body>
 </html>

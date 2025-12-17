@@ -232,6 +232,13 @@ footer {
   font-size: 0.9rem;
 }
 
+.logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   #hamburger { display: block; }

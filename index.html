@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UniVerse – Your Campus. Your Universe.</title>
-  <meta name="description" content="Private social app for Nigerian university students. Campus-only feed, stories, channels — no outsiders, no lecturers.">
-  <meta property="og:title" content="UniVerse – Private Campus Social App">
-  <meta property="og:description" content="Your school. Your rules. Join the private universe for Nigerian university students.">
-  <meta property="og:image" content="https://yourdomain.com/screenshot1.webp">
-  <meta property="og:url" content="https://yourdomain.com">
+
+  <title>UniVerse – A Campus Social App for Nigerian Students</title>
+
+  <meta name="description" content="UniVerse is a campus-focused social app built for Nigerian university students to connect through feeds, stories, and topic-based channels.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="UniVerse – Campus Social App for Nigerian Universities">
+  <meta property="og:description" content="A student-built social platform focused on Nigerian university communities. Currently piloted in selected campuses.">
+  <meta property="og:image" content="img/og-cover.webp">
+  <meta property="og:url" content="https://universe-ng.github.io">
   <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <nav>
     <div class="container">
-      <div class="logo">UniVerse</div>
+     <div class="logo">
+       <img src="img/logo/universe-logo.svg" alt="UniVerse logo">
+     </div>
       <div class="menu" id="menu">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="download.html">Download</a>
         <a href="privacy.html">Privacy</a>
@@ -28,58 +36,92 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <header>
     <h1>UniVerse</h1>
     <p class="tagline">Your Campus. Your Universe.</p>
-    <p class="subtitle">Private social app for Nigerian university students.<br>No outsiders. No lecturers. Just your school.</p>
-    <a href="download.html" class="btn hero-btn">Download UniVerse APK</a>
+    <p class="subtitle">
+      A campus-focused social platform designed specifically for Nigerian
+      university students.
+    </p>
+    <a href="download.html" class="btn hero-btn">Download the App</a>
   </header>
 
   <div class="container">
+
+    <!-- SCREENSHOTS -->
     <div class="shots">
-      <img src="img/feed.webp" alt="Feed">
-      <img src="img/stories.webp" alt="Stories">
-      <img src="img/channels.webp" alt="Channels">
-      <img src="img/profile.webp" alt="Profile">
+      <img src="img/feed.webp" alt="Campus feed interface">
+      <img src="img/stories.webp" alt="Stories feature">
+      <img src="img/channels.webp" alt="Topic-based channels">
+      <img src="img/profile.webp" alt="User profile screen">
     </div>
 
+    <!-- FEATURES -->
     <div class="features">
       <div class="feature">
-        <h3>Campus-Only Feed</h3>
-        <p>Only students from your university can see and post. Real privacy.</p>
+        <h3>Campus-Centered Feed</h3>
+        <p>
+          Content and discussions are organized around individual university
+          communities for relevance and focus.
+        </p>
       </div>
+
       <div class="feature">
         <h3>Stories & Channels</h3>
-        <p>Share moments, join general, memes, confessions, academics — your way.</p>
+        <p>
+          Share short updates and participate in structured channels covering
+          academics, student life, and interests.
+        </p>
       </div>
+
       <div class="feature">
-        <h3>100% Anonymous Option</h3>
-        <p>Post freely without fear. Your identity stays hidden.</p>
+        <h3>Optional Anonymity</h3>
+        <p>
+          Selected features support anonymous participation to encourage open
+          discussion where appropriate.
+        </p>
       </div>
+
       <div class="feature">
-        <h3>No Ads. No Tracking.</h3>
-        <p>Made by students, for students. Clean experience only.</p>
+        <h3>Privacy-Focused Design</h3>
+        <p>
+          Built with an emphasis on minimizing unnecessary data collection and
+          avoiding third-party tracking.
+        </p>
       </div>
     </div>
 
+    <!-- CTA -->
     <div class="center" style="margin:60px 0;">
-      <h2>Join thousands of students already on UniVerse</h2>
-      <a href="download.html" class="btn hero-btn">Get the App Now</a>
+      <h2>Designed for Nigerian university communities</h2>
+      <p class="subtitle">
+        UniVerse is currently piloted in selected campuses, with gradual
+        expansion planned.
+      </p>
+      <a href="download.html" class="btn hero-btn">Get UniVerse</a>
     </div>
 
+    <!-- TRUST -->
     <div class="trust">
-      <p>Made with ❤️ by Nigerian university students • Starting with UDUS & BUK</p>
+      <p>
+        Built by Nigerian university students • Initial rollout in selected
+        universities
+      </p>
     </div>
+
   </div>
 
-  <footer>© 2025 UniVerse • Private Campus Social App • Nigeria</footer>
+  <footer>
+    © 2025 UniVerse • Campus Social Platform • Nigeria
+  </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click', () => 
+    document.getElementById('hamburger').addEventListener('click', () =>
       document.getElementById('menu').classList.toggle('active')
     );
-    document.querySelectorAll('.menu a').forEach(a => 
-      a.addEventListener('click', () => 
+    document.querySelectorAll('.menu a').forEach(a =>
+      a.addEventListener('click', () =>
         document.getElementById('menu').classList.remove('active')
       )
     );

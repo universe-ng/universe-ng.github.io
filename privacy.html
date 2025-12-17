@@ -4,45 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – UniVerse</title>
+  <meta name="description" content="Read how UniVerse handles user information and privacy for its campus-focused social platform.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav>
     <div class="container">
-      <div class="logo">UniVerse</div>
+      <div class="logo">
+       <img src="img/logo/universe-logo.svg" alt="UniVerse logo">
+      </div>
+
       <div class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="download.html">Download</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="privacy.html" class="active">Privacy</a>
         <a href="contact.html">Contact</a>
       </div>
       <div id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-  <header><h1>Privacy Policy</h1></header>
+  <header>
+    <h1>Privacy Policy</h1>
+  </header>
+
   <div class="container">
     <main>
       <div class="card" style="max-width:820px;margin:40px auto;">
+
         <p><strong>Last updated:</strong> 25 November 2025</p>
-       <p>We collect only what's needed to verify you're a real student. No tracking. No ads. No selling data.</p>
+
+        <p>
+          UniVerse is designed with student privacy in mind. This policy
+          explains what information we collect, how it is used, and how we
+          work to protect it.
+        </p>
+
+        <h3>Information we collect</h3>
         <ul>
-          <li>Email or phone number only if you choose to log in (anonymous mode coming soon)</li>
-          <li>Chat messages are stored securely on Google Firebase</li>
-          <li>No analytics, no tracking, no third-party ads</li>
-          <li>We will never sell or share your data</li>
+          <li>
+            Basic account information (such as email address or phone number)
+            if you choose to create an account
+          </li>
+          <li>
+            Content you choose to share on the platform, including posts,
+            messages, and profile details
+          </li>
         </ul>
-        <p>Contact: <a href="mailto:batako11@gmail.com" style="color:var(--green);">batako11@gmail.com</a></p>
+
+        <h3>How information is used</h3>
+        <ul>
+          <li>To provide and maintain core app functionality</li>
+          <li>To support campus-based interactions and moderation</li>
+          <li>To improve reliability, performance, and user experience</li>
+        </ul>
+
+        <h3>Data storage and security</h3>
+        <ul>
+          <li>
+            User data is stored using secure cloud infrastructure (including
+            Google Firebase)
+          </li>
+          <li>
+            Reasonable technical measures are taken to protect data from
+            unauthorized access
+          </li>
+        </ul>
+
+        <h3>Third-party services</h3>
+        <p>
+          UniVerse may rely on trusted third-party services for infrastructure
+          and app functionality. These services are used only as necessary to
+          operate the platform.
+        </p>
+
+        <h3>Data sharing</h3>
+        <p>
+          We do not sell user data. Information is shared only when required
+          to operate the service or comply with applicable laws.
+        </p>
+
+        <h3>Your choices</h3>
+        <p>
+          You may choose what information to share on UniVerse and can
+          request account deletion by contacting us.
+        </p>
+
+        <p style="margin-top:24px;">
+          Contact us at
+          <a href="mailto:batako11@gmail.com" style="color:var(--green);">
+            batako11@gmail.com
+          </a>
+          if you have questions about this policy.
+        </p>
+
       </div>
     </main>
   </div>
 
-  <footer>© 2025 Udus Forum • Made with ❤️ by a UDUS student</footer>
+  <footer>
+    © 2025 UniVerse • Campus Social Platform • Nigeria
+  </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
-    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+    document.getElementById('hamburger').addEventListener('click', () =>
+      document.getElementById('menu').classList.toggle('active')
+    );
+    document.querySelectorAll('.menu a').forEach(a =>
+      a.addEventListener('click', () =>
+        document.getElementById('menu').classList.remove('active')
+      )
+    );
   </script>
 </body>
 </html>
