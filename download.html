@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ904VQFK0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJ904VQFK0');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download – UniVerse</title>
@@ -10,12 +19,14 @@
   <nav>
     <div class="container">
      <div class="logo">
-       <img src="img/logo/universe-logo.png" alt="UniVerse logo">
+       <a href="index.html">
+        <img src="img/logo/universe-logo.png" alt="UniVerse logo">
+       </a>
      </div>
       <div class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="download.html">Download</a>
+        <a href="download.html" class="active">Download</a>
         <a href="privacy.html">Privacy</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -27,30 +38,37 @@
     <h1>Download UniVerse</h1>
   </header>
 
-  <div class="box" style="max-width:760px;margin:40px auto;text-align:center;">
-    <h2 style="color:var(--accent);">Early Access Release</h2>
+  <div class="box" style="max-width:760px; margin:40px auto; text-align:center;">
+    <h2 style="color:var(--accent); margin-bottom: 10px;">Early Access Release</h2>
 
-    <p>
+    <p style="color: var(--text-light);">
       <strong>Version 1.0.0</strong> • ~58&nbsp;MB • December&nbsp;2025
     </p>
 
-    <p style="margin:20px 0;">
+    <p style="margin:24px 0 32px; color: var(--muted);">
       This is the initial public release of UniVerse, providing core features
       such as the campus feed, stories, discussion channels, and user profiles.
     </p>
 
-    <a href="downloads/universe-v1.apk" class="btn hero-btn">
-      Download UniVerse APK
-    </a>
+    <div class="btn-group" style="justify-content: center; margin-bottom: 30px;">
+      
+      <a href="downloads/universe-v1.apk" class="btn btn-primary">
+        Download APK
+      </a>
 
-    <p style="color:var(--muted);margin-top:24px;">
+      <a href="#" id="ios-btn" class="btn btn-secondary">
+        Download for iOS
+      </a>
+      
+    </div>
+
+    <p style="color:var(--muted); font-size: 0.9rem; margin-top:24px;">
       UniVerse is currently distributed directly as part of an early rollout.
       Availability on the Google Play Store is planned for a later phase.
     </p>
 
-    <p style="color:var(--muted);margin-top:12px;font-size:0.95rem;">
-      Depending on your device settings, you may be prompted to allow app
-      installation from external sources.
+    <p style="color:var(--muted); margin-top:12px; font-size:0.9rem; font-style: italic;">
+      Note: You may need to allow installation from "Unknown Sources" in your settings.
     </p>
   </div>
 
@@ -58,7 +76,10 @@
     © 2025 UniVerse • Made with ❤️ in Nigeria
   </footer>
 
+  <div id="toast">Coming to the App Store soon! 🍎</div>
+
   <script>
+    // Menu Logic
     document.getElementById('hamburger').addEventListener('click', () =>
       document.getElementById('menu').classList.toggle('active')
     );
@@ -67,6 +88,20 @@
         document.getElementById('menu').classList.remove('active')
       )
     );
+
+    // Toast Logic for iOS Button
+    const iosBtn = document.getElementById('ios-btn');
+    const toast = document.getElementById('toast');
+
+    iosBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevents the link from jumping to the top
+      toast.className = "show"; // Shows the toast
+      
+      // Hide it after 3 seconds
+      setTimeout(function(){ 
+        toast.className = toast.className.replace("show", ""); 
+      }, 3000);
+    });
   </script>
 </body>
 </html>

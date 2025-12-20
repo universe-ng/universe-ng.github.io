@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ904VQFK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ904VQFK0');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – UniVerse</title>
+  <meta name="description" content="Get in touch with the UniVerse team for support, feedback, or inquiries.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <nav>
     <div class="container">
       <div class="logo">
+       <a href="index.html">
         <img src="img/logo/universe-logo.png" alt="UniVerse logo">
+       </a>
       </div>
 
       <div class="menu" id="menu">
@@ -18,37 +30,53 @@
         <a href="about.html">About</a>
         <a href="download.html">Download</a>
         <a href="privacy.html">Privacy</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </div>
       <div id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-  <header><h1>Contact</h1></header>
- <div class="card" style="max-width:720px;margin:0 auto;">
-  <p>
-    For support, feedback, or inquiries, contact us at:
-  </p>
+  <header>
+    <h1>Contact Us</h1>
+    <p class="subtitle">We'd love to hear from you.</p>
+  </header>
 
-  <p style="margin:20px 0;">
-    <a href="mailto:universe.app@gmail.com" class="btn">
-      universe.app@gmail.com
-    </a>
-  </p>
+  <div class="container">
+    <div class="card" style="max-width:720px; margin:40px auto; text-align: center; padding: 50px 30px;">
+      
+      <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">
+        Have a question, feedback, or found a bug? 
+        <br>
+        Reach out to our team directly.
+      </p>
 
-  <p style="color:var(--muted);">
-    Community channels and public groups will be announced after launch.
-  </p>
-</div>
+      <a href="mailto:universe.app@gmail.com" class="btn btn-primary" style="margin-bottom: 40px;">
+        Email Support
+      </a>
 
+      <div style="border-top: 1px solid var(--border); padding-top: 30px; margin-top: 10px;">
+        <h3 style="color: var(--text-light); font-size: 1.2rem; margin-bottom: 10px;">Community Channels</h3>
+        <p style="color:var(--muted);">
+          Official public groups and campus ambassador channels will be announced here after the full launch.
+        </p>
+      </div>
+
+    </div>
+  </div>
 
   <footer>
-    © 2025 UniVerse • Built by Nigerian university students
- </footer>
+    © 2025 UniVerse • Campus Social Platform • Nigeria
+  </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('menu').classList.toggle('active'));
-    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('active')));
+    document.getElementById('hamburger').addEventListener('click', () => 
+      document.getElementById('menu').classList.toggle('active')
+    );
+    document.querySelectorAll('.menu a').forEach(a => 
+      a.addEventListener('click', () => 
+        document.getElementById('menu').classList.remove('active')
+      )
+    );
   </script>
 </body>
 </html>

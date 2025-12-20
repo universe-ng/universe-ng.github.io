@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ904VQFK0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJ904VQFK0');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>UniVerse – A Campus Social App for Nigerian Students</title>
-
-  <meta name="description" content="UniVerse is a campus-focused social app built for Nigerian university students to connect through feeds, stories, and topic-based channels.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="UniVerse – Campus Social App for Nigerian Universities">
-  <meta property="og:description" content="A student-built social platform focused on Nigerian university communities. Currently piloted in selected campuses.">
-  <meta property="og:image" content="img/og-cover.webp">
-  <meta property="og:url" content="https://universe-ng.github.io">
-  <meta property="og:type" content="website">
-
+  <meta name="description" content="UniVerse is a campus-focused social app built for Nigerian university students.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -22,9 +20,11 @@
 <body>
   <nav>
     <div class="container">
-     <div class="logo">
-       <img src="img/logo/universe-logo.png" alt="UniVerse logo">
-     </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo/universe-logo.png" alt="UniVerse logo">
+        </a>
+      </div>
       <div class="menu" id="menu">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -36,80 +36,82 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header>
-    <h1>UniVerse</h1>
-    <p class="tagline">Your Campus. Your Universe.</p>
-    <p class="subtitle">
-      A campus-focused social platform designed specifically for Nigerian
-      university students.
-    </p>
-    <a href="download.html" class="btn hero-btn">Download the App</a>
+  <header class="hero">
+    <div class="container">
+      
+      <div class="hero-content">
+        <h1>Your Campus.<br><span>Your Universe.</span></h1>
+        <p class="tagline">
+          The exclusive social platform designed for Nigerian university students. 
+          Connect, share, and vibe with your real campus community.
+        </p>
+        
+        <div class="btn-group">
+          <a href="download.html" class="btn btn-primary">
+            Download APK
+          </a>
+          <a href="#" class="btn btn-secondary">
+            App Store <span>Coming Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="img/feed.webp" alt="UniVerse App Interface" class="phone-mockup">
+      </div>
+
+    </div>
   </header>
 
-  <div class="container">
-
-    <!-- SCREENSHOTS -->
-    <div class="shots">
-      <img src="img/feed.webp" alt="Campus feed interface">
-      <img src="img/stories.webp" alt="Stories feature">
-      <img src="img/channels.webp" alt="Topic-based channels">
-      <img src="img/profile.webp" alt="User profile screen">
-    </div>
-
-    <!-- FEATURES -->
-    <div class="features">
-      <div class="feature">
+  <section class="features-section container">
+    
+    <div class="feature-row">
+      <div class="feature-text">
         <h3>Campus-Centered Feed</h3>
-        <p>
-          Content and discussions are organized around individual university
-          communities for relevance and focus.
-        </p>
+        <p>No more noise. Content is organized around your specific university. 
+           See what's happening at UNILAG, OAU, or your campus right now.</p>
       </div>
+      <div class="feature-img">
+        <img src="img/feed.webp" alt="Campus Feed">
+      </div>
+    </div>
 
-      <div class="feature">
+    <div class="feature-row reverse">
+      <div class="feature-text">
         <h3>Stories & Channels</h3>
-        <p>
-          Share short updates and participate in structured channels covering
-          academics, student life, and interests.
-        </p>
+        <p>Share quick daily updates with Stories, or dive deep into topic-based 
+           Channels for academics, sports, and gist.</p>
       </div>
-
-      <div class="feature">
-        <h3>Optional Anonymity</h3>
-        <p>
-          Selected features support anonymous participation to encourage open
-          discussion where appropriate.
-        </p>
-      </div>
-
-      <div class="feature">
-        <h3>Privacy-Focused Design</h3>
-        <p>
-          Built with an emphasis on minimizing unnecessary data collection and
-          avoiding third-party tracking.
-        </p>
+      <div class="feature-img">
+        <img src="img/stories.webp" alt="Stories Feature">
       </div>
     </div>
 
-    <!-- CTA -->
-    <div class="center" style="margin:60px 0;">
-      <h2>Designed for Nigerian university communities</h2>
-      <p class="subtitle">
-        UniVerse is currently piloted in selected campuses, with gradual
-        expansion planned.
-      </p>
-      <a href="download.html" class="btn hero-btn">Get UniVerse</a>
+    <div class="feature-row">
+      <div class="feature-text">
+        <h3>Go Anonymous</h3>
+        <p>Sometimes you need to speak freely. Use our optional anonymity 
+           feature to discuss sensitive topics without revealing your identity.</p>
+      </div>
+      <div class="feature-img">
+        <img src="img/profile.webp" alt="Anonymous Mode">
+      </div>
     </div>
 
-    <!-- TRUST -->
-    <div class="trust">
-      <p>
-        Built by Nigerian university students • Initial rollout in selected
-        universities
-      </p>
-    </div>
+  </section>
 
+  <div class="container" style="text-align: center; margin-bottom: 80px;">
+    <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-light);">Ready to join?</h2>
+    <p style="color: var(--muted); margin-bottom: 30px;">
+      Currently piloting in selected Nigerian universities.
+    </p>
+    <a href="download.html" class="btn btn-primary" style="padding: 16px 48px; font-size: 1.1rem;">
+      Get the App
+    </a>
+  </div>
+
+  <div class="trust-badge container">
+    <p>Built by Nigerian Students • Secure & Private</p>
   </div>
 
   <footer>
@@ -117,13 +119,9 @@
   </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click', () =>
+    // Simple Hamburger Logic
+    document.getElementById('hamburger').addEventListener('click', () => 
       document.getElementById('menu').classList.toggle('active')
-    );
-    document.querySelectorAll('.menu a').forEach(a =>
-      a.addEventListener('click', () =>
-        document.getElementById('menu').classList.remove('active')
-      )
     );
   </script>
 </body>
