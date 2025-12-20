@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ904VQFK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ904VQFK0');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – UniVerse</title>
+  <meta name="description" content="Updates, stories, and news from Team DR BTK and the UniVerse community.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">
+       <a href="index.html">
+        <img src="img/logo/universe-logo.png" alt="UniVerse logo">
+       </a>
+      </div>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header style="padding: 80px 0 40px; text-align: center;">
+    <h1>UniVerse Blog</h1>
+    <p class="subtitle">Updates, stories, and news from Team DR BTK.</p>
+  </header>
+
+  <div class="container">
+    <div class="blog-grid">
+      
+      <article class="blog-card">
+        <div class="card-image placeholder" style="background: linear-gradient(135deg, #f59e0b, #b45309);">😂</div> 
+        
+        <div class="card-content">
+          <div class="post-meta">Campus Culture • Dec 20, 2025</div>
+          <h3>5 Types of Students You Meet in Every Exam Hall</h3>
+          <p>From the "Lord of the Sheets" to the "Giraffe." Which one are you? A look at the legends of exam season.</p>
+          <a href="blog/exam-types.html" class="read-link">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="card-image placeholder">🚀</div> 
+        
+        <div class="card-content">
+          <div class="post-meta">Vision • Dec 20, 2025</div>
+          <h3>Why Nigerian Campuses Need Their Own Universe</h3>
+          <p>Moving beyond messy WhatsApp groups and noisy timelines. Why we built a social network specifically for students.</p>
+          <a href="blog/hello-world.html" class="read-link">Read Article →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 UniVerse • Campus Social Platform • Nigeria
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => 
+      document.getElementById('menu').classList.toggle('active')
+    );
+    document.querySelectorAll('.menu a').forEach(a => 
+      a.addEventListener('click', () => 
+        document.getElementById('menu').classList.remove('active')
+      )
+    );
+  </script>
+</body>
+</html>
