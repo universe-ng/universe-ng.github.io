@@ -17,9 +17,24 @@
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <nav>
-    <!-- Same nav as always -->
-  </nav>
+ <nav>
+  <div class="container">
+    <div class="logo">
+     <a href="../index.html">
+      <img src="../img/logo/universe-logo.png" alt="UniVerse logo">
+     </a>
+    </div>
+    <div class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../download.html">Download</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
 
   <div class="article-container">
     <a href="../blog.html">← Back to Blog</a>
@@ -57,10 +72,15 @@
     © 2025 UniVerse • Campus Social Platform • Nigeria
   </footer>
 
-  <script>
-    document.getElementById('hamburger').addEventListener('click', () => 
-      document.getElementById('menu').classList.toggle('active')
-    );
-  </script>
+ <script>
+  document.getElementById('hamburger').addEventListener('click', () => 
+    document.getElementById('menu').classList.toggle('active')
+  );
+  document.querySelectorAll('.menu a').forEach(a => 
+    a.addEventListener('click', () => 
+      document.getElementById('menu').classList.remove('active')
+    )
+  );
+</script>
 </body>
 </html>
