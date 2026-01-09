@@ -1,9 +1,14 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.batako.universe",
-    "sha256_cert_fingerprints":
-    ["75:61:2D:9A:0B:DD:51:56:7B:74:07:01:0F:38:D9:58:24:06:10:B0:72:E3:67:53:0A:5C:F7:98:8C:86:F6:CE"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.batako.universe",
+      "sha256_cert_fingerprints": [
+        "75:61:2D:9A:0B:DD:51:56:7B:74:07:01:0F:38:D9:58:24:06:10:B0:72:E3:67:53:0A:5C:F7:98:8C:86:F6:CE",
+        "8A:7D:BF:5C:C4:F0:CC:B5:E7:9C:58:7B:F0:AD:86:16:D4:BD:FA:65:74:AE:3F:C5:1E:30:62:2B:BB:E7:D9:FD",
+        "8A:87:42:C3:61:3C:0A:A3:6D:EB:B4:65:5C:22:38:52:5E:AC:5C:3A:F1:BB:66:40:D6:7D:CF:17:01:B9:18:FC"
+      ]
+    }
   }
-}]
+]
