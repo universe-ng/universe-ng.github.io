@@ -12,9 +12,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact UniVerse</title>
-  <meta name="description" content="Get in touch with the UniVerse team for support, feedback, or inquiries.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <style>
+    /* Chat Widget Styles */
+    .chat-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(29, 161, 242, 0.4);
+      z-index: 1001;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .chat-btn:hover { transform: scale(1.1); }
+
+    .chat-box {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 350px;
+      max-width: 90vw;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      display: none; /* Hidden by default */
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 1002;
+      animation: slideUp 0.3s ease;
+      backdrop-filter: var(--glass);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .chat-header {
+      background: var(--primary);
+      padding: 20px;
+      color: white;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-form { padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+
+    .chat-form input, .chat-form textarea {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 10px;
+      color: white;
+      font-family: inherit;
+    }
+
+    .chat-form textarea { height: 100px; resize: none; }
+
+    .chat-form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .chat-form button:hover { background: var(--primary-hover); }
+  </style>
 </head>
 <body>
   <nav>
@@ -24,10 +106,10 @@
         <img src="img/logo/universe-logo.png" alt="UniVerse logo">
        </a>
       </div>
-
       <div class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
         <a href="download.html">Download</a>
         <a href="privacy.html">Privacy</a>
         <a href="contact.html" class="active">Contact</a>
@@ -38,45 +120,60 @@
 
   <header>
     <h1>Contact Us</h1>
-    <p class="subtitle">We'd love to hear from you.</p>
+    <p class="subtitle">Need help or found a bug?</p>
   </header>
 
   <div class="container">
     <div class="card" style="max-width:720px; margin:40px auto; text-align: center; padding: 50px 30px;">
-      
       <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">
-        Have a question, feedback, or found a bug? 
-        <br>
-        Reach out to our team directly.
+        Click the chat icon in the bottom right to talk to Team DR BTK.
       </p>
-
-      <a href="mailto:universe.app@gmail.com" class="btn btn-primary" style="margin-bottom: 40px;">
-        Email Support
-      </a>
-
-      <div style="border-top: 1px solid var(--border); padding-top: 30px; margin-top: 10px;">
-        <h3 style="color: var(--text-light); font-size: 1.2rem; margin-bottom: 10px;">Community Channels</h3>
-        <p style="color:var(--muted);">
-          Official public groups and campus ambassador channels will be announced here after the full launch.
+      <div style="border-top: 1px solid var(--border); padding-top: 30px;">
+        <p style="color:var(--muted); font-size: 0.9rem;">
+            Average response time: <span style="color: var(--accent);">Under 24 hours</span>
         </p>
       </div>
-
     </div>
   </div>
 
+  <div class="chat-btn" id="openChat">💬</div>
+
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">
+      <span>UniVerse Support</span>
+      <span style="cursor:pointer" id="closeChat">✕</span>
+    </div>
+    <form class="chat-form" action="https://formspree.io/f/xlggoyzn" method="POST">
+      <input type="email" name="email" placeholder="Your University Email" required>
+      <textarea name="message" placeholder="Describe your issue or feedback..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
   <footer>
-    © 2025 UniVerse • Campus Social Platform • Nigeria
+    © 2026 UniVerse • Campus Social Platform • Nigeria
   </footer>
 
   <script>
+    // Navigation Toggle
     document.getElementById('hamburger').addEventListener('click', () => 
       document.getElementById('menu').classList.toggle('active')
     );
-    document.querySelectorAll('.menu a').forEach(a => 
-      a.addEventListener('click', () => 
-        document.getElementById('menu').classList.remove('active')
-      )
-    );
+
+    // Chat Box Toggle
+    const openBtn = document.getElementById('openChat');
+    const closeBtn = document.getElementById('closeChat');
+    const chatBox = document.getElementById('chatBox');
+
+    openBtn.addEventListener('click', () => {
+        chatBox.style.display = 'flex';
+        openBtn.style.display = 'none';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        chatBox.style.display = 'none';
+        openBtn.style.display = 'flex';
+    });
   </script>
 </body>
 </html>
