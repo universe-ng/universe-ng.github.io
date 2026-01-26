@@ -15,6 +15,34 @@
   <meta name="description" content="Privacy Policy for UniVerse - The campus social platform for Nigerian students.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <style>
+    .privacy-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .privacy-form input, .privacy-form textarea {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 10px;
+      color: white;
+      font-family: inherit;
+    }
+    .privacy-form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .privacy-form button:hover { background: var(--primary-hover); }
+  </style>
 </head>
 <body>
   <nav>
@@ -24,7 +52,6 @@
         <img src="img/logo/universe-logo.png" alt="UniVerse logo">
        </a>
       </div>
-
       <div class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -96,29 +123,33 @@
           </li>
         </ul>
 
-      <h3 style="color: var(--text-light); margin-bottom: 16px;">Data Retention & Deletion</h3>
-<p style="color: var(--muted); margin-bottom: 15px;">
-  We retain your data only as long as necessary to provide our services. You have full control over your information:
-</p>
-<ul style="padding-left: 20px; line-height: 1.7; color: var(--muted); margin-bottom: 30px;">
-  <li><strong>In-App Deletion:</strong> You can delete your account and all associated data instantly via the "Delete Account" option in your Profile Settings.</li>
-  <li><strong>Web Request:</strong> If you can no longer access the app, you may request account and data deletion by contacting us at <strong>batako11@gmail.com</strong>. We will process your request within 7 business days.</li>
-  <li><strong>Scope:</strong> Upon deletion, your profile, UniCoins, and private messages are permanently purged. Public stories or feed posts may be cached briefly but will be inaccessible to other users.</li>
-</ul>
+        <h3 style="color: var(--text-light); margin-bottom: 16px;">Data Retention & Deletion</h3>
+        <p style="color: var(--muted); margin-bottom: 15px;">
+          We retain your data only as long as necessary to provide our services. You have full control over your information:
+        </p>
+        <ul style="padding-left: 20px; line-height: 1.7; color: var(--muted); margin-bottom: 30px;">
+          <li><strong>In-App Deletion:</strong> You can delete your account and all associated data instantly via the "Delete Account" option in your Profile Settings.</li>
+          <li><strong>Web Request:</strong> If you can no longer access the app, you may request account and data deletion via the inquiry form below. We will process your request within 7 business days.</li>
+          <li><strong>Scope:</strong> Upon deletion, your profile, UniCoins, and private messages are permanently purged. Public stories or feed posts may be cached briefly but will be inaccessible to other users.</li>
+        </ul>
 
-<h3 style="color: var(--text-light); margin-bottom: 16px;">Children's Privacy</h3>
-<p style="color: var(--muted); margin-bottom: 30px;">
-  UniVerse is designed for university students and is not intended for children under the age of 13. We do not knowingly collect personal information from children. If we discover a user is under 13, we will delete their account immediately.
-</p>
+        <h3 style="color: var(--text-light); margin-bottom: 16px;">Children's Privacy</h3>
+        <p style="color: var(--muted); margin-bottom: 30px;">
+          UniVerse is designed for university students and is not intended for children under the age of 13. We do not knowingly collect personal information from children. If we discover a user is under 13, we will delete their account immediately.
+        </p>
 
-        <div style="background: rgba(29, 161, 242, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(29, 161, 242, 0.2);">
-          <p style="margin: 0; font-size: 0.95rem;">
-            Have questions about this policy? Contact us at:
-            <br>
-            <a href="mailto:batako11@gmail.com" style="color:var(--primary); font-weight: 700; text-decoration: none;">
-              batako11@gmail.com
-            </a>
+        <div style="background: rgba(29, 161, 242, 0.1); padding: 25px; border-radius: 12px; border: 1px solid rgba(29, 161, 242, 0.2);">
+          <h4 style="color: var(--text-light); margin-bottom: 10px;">Privacy Inquiries</h4>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--muted);">
+            Have questions about this policy or need to request data deletion? 
           </p>
+          
+          <form class="privacy-form" action="https://formspree.io/f/xlggoyzn" method="POST">
+            <input type="hidden" name="_subject" value="UniVerse Privacy Inquiry">
+            <input type="email" name="email" placeholder="Your University Email" required>
+            <textarea name="message" placeholder="How can we help with your data or privacy concerns?" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
 
       </div>
