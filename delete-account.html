@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ904VQFK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ904VQFK0');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Account Deletion UniVerse</title>
+  <title>Request Account Deletion - UniVerse</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <style>
+    /* Styling for the Deletion Form */
+    .delete-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .delete-form input, .delete-form textarea {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 10px;
+      color: white;
+      font-family: inherit;
+    }
+    .delete-form button {
+      background: #d32f2f;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .delete-form button:hover {
+      background: #b71c1c;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
  <nav>
@@ -21,7 +61,8 @@
         <a href="privacy.html">Privacy</a>
         <a href="contact.html">Contact</a>
       </div>
-      </div>
+      <div id="hamburger"><span></span><span></span><span></span></div>
+    </div>
   </nav>
 
   <header>
@@ -40,29 +81,26 @@
         </p>
 
         <p style="margin-bottom: 20px;">
-          If you are unable to access the app, you can request manual deletion of your data by contacting our support team.
+          If you are unable to access the app, you can request manual deletion of your data by filling out the form below.
         </p>
 
         <hr style="border: 0; border-top: 1px solid var(--border); margin: 30px 0;">
 
         <h3 style="color: var(--text-light); margin-bottom: 16px;">Request Manual Deletion</h3>
-        <p>Please send an email with the subject <strong>"DELETE ACCOUNT"</strong>.</p>
         
-        <ul style="padding-left: 20px; line-height: 1.7; color: var(--muted); margin-bottom: 30px;">
-          <li>Include your registered <strong>Email Address</strong>.</li>
-          <li>Include your <strong>Username</strong>.</li>
-          <li>We may ask for proof of ownership before deletion.</li>
-        </ul>
-
-        <div style="background: rgba(255, 0, 0, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 0, 0, 0.1);">
-          <p style="margin: 0; font-size: 1rem; text-align: center;">
-            <a href="mailto:devbtk00@gmail.com?subject=DELETE ACCOUNT" style="color: #d32f2f; font-weight: 700; text-decoration: none;">
-              Click here to email support: devbtk00@gmail.com
-            </a>
-          </p>
+        <div style="background: rgba(255, 0, 0, 0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 0, 0, 0.1);">
+          <form class="delete-form" action="https://formspree.io/f/xlggoyzn" method="POST">
+            <input type="hidden" name="_subject" value="UniVerse: Account Deletion Request">
+            
+            <input type="email" name="email" placeholder="Your Registered Email Address" required>
+            <input type="text" name="username" placeholder="Your UniVerse Username" required>
+            <textarea name="message" placeholder="Please confirm you want to delete your account and all associated data. (Optional: tell us why)"></textarea>
+            
+            <button type="submit">Submit Deletion Request</button>
+          </form>
         </div>
 
-        <p style="margin-top: 30px; font-size: 0.9rem; color: var(--muted);">
+        <p style="margin-top: 30px; font-size: 0.9rem; color: var(--muted); text-align: center;">
           <strong>Note:</strong> Data deletion is permanent. This will remove your profile, photos, comments, and UniCoins wallet balance. This action cannot be undone.
         </p>
 
@@ -73,5 +111,12 @@
   <footer>
     © 2026 UniVerse • Campus Social Platform • Nigeria
   </footer>
+
+  <script>
+    // Navigation Toggle
+    document.getElementById('hamburger').addEventListener('click', () => 
+      document.getElementById('menu').classList.toggle('active')
+    );
+  </script>
 </body>
 </html>

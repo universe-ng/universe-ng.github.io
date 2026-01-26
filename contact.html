@@ -118,34 +118,48 @@
     </div>
   </nav>
 
-  <header>
-    <h1>Contact Us</h1>
-    <p class="subtitle">Need help or found a bug?</p>
+<header>
+    <h1>Get in Touch</h1>
+    <p class="subtitle">Support for the UniVerse Community</p>
   </header>
 
-  <div class="container">
-    <div class="card" style="max-width:720px; margin:40px auto; text-align: center; padding: 50px 30px;">
-      <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">
-        Click the chat icon in the bottom right to talk to Team DR BTK.
+<div class="container">
+    <div class="card" style="max-width:720px; margin:40px auto; text-align: center; padding: 40px 20px;">
+      <h3 style="color: var(--text-light); margin-bottom: 15px;">How can we help?</h3>
+      <p style="font-size: 1rem; color: var(--muted); margin-bottom: 30px;">
+        Whether you have a technical bug, a question about UniCoins, or want to report inappropriate content, Team DR BTK is here for you.
       </p>
-      <div style="border-top: 1px solid var(--border); padding-top: 30px;">
-        <p style="color:var(--muted); font-size: 0.9rem;">
-            Average response time: <span style="color: var(--accent);">Under 24 hours</span>
-        </p>
+
+      <div style="margin-bottom: 30px;">
+        <p style="color:var(--text-light); font-weight: 600;">Chat with us below!</p>
+        <p style="color:var(--muted); font-size: 0.9rem;">Response time: <span style="color: var(--accent);">Typically under 24 hours</span></p>
+      </div>
+
+      <div class="store-link-contact">
+        <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 15px;">Not using the app yet?</p>
+        <a href="https://play.google.com/store/apps/details?id=com.batako.universe&pcampaignid=web_share">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+        </a>
       </div>
     </div>
   </div>
 
   <div class="chat-btn" id="openChat">💬</div>
 
-  <div class="chat-box" id="chatBox">
+<div class="chat-box" id="chatBox">
     <div class="chat-header">
       <span>UniVerse Support</span>
       <span style="cursor:pointer" id="closeChat">✕</span>
     </div>
     <form class="chat-form" action="https://formspree.io/f/xlggoyzn" method="POST">
       <input type="email" name="email" placeholder="Your University Email" required>
-      <textarea name="message" placeholder="Describe your issue or feedback..." required></textarea>
+      <select name="subject" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; border-radius: 10px;">
+        <option value="Bug Report">Bug Report</option>
+        <option value="Account Issue">Account Issue</option>
+        <option value="Safety/Report Content">Safety/Report Content</option>
+        <option value="General Feedback">General Feedback</option>
+      </select>
+      <textarea name="message" placeholder="How can we help you today?" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>

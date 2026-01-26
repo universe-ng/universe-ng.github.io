@@ -6,7 +6,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MJ904VQFK0');
 </script>
 
@@ -14,6 +13,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download UniVerse</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styling to make the Play Store badge look professional */
+    .play-store-badge img {
+      width: 220px;
+      transition: transform 0.2s;
+    }
+    .play-store-badge img:hover {
+      transform: scale(1.05);
+    }
+    .btn-apk {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--muted);
+      text-decoration: underline;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -35,45 +51,48 @@
   </nav>
 
   <header>
-    <h1>Download UniVerse</h1>
+    <h1>Get UniVerse</h1>
   </header>
 
-  <div class="box" style="max-width:760px; margin:40px auto; text-align:center;">
-    <h2 style="color:var(--accent); margin-bottom: 10px;">Early Access Release</h2>
+  <div class="box" style="max-width:760px; margin:40px auto; text-align:center; padding: 20px;">
+    <h2 style="color:var(--accent); margin-bottom: 10px;">Official Release</h2>
 
     <p style="color: var(--text-light);">
-      <strong>Version 1.0.0</strong> • 58&nbsp;MB • December&nbsp;2025
+      <strong>Version 1.0.0</strong> • Android • Nigeria
     </p>
 
-    <p style="margin:24px 0 32px; color: var(--muted);">
-      This is the initial public release of UniVerse, providing core features
-      such as the campus feed, stories, discussion channels, and user profiles.
+    <p style="margin:24px 0 32px; color: var(--muted); line-height: 1.6;">
+      UniVerse is now officially live! Connect with your campus community, 
+      share stories, and vibe with students across Nigeria.
     </p>
 
-    <div class="btn-group" style="justify-content: center; margin-bottom: 30px;">
-      
-      <a href="downloads/universe-v1.apk" class="btn btn-primary">
-        Download APK
+    <div class="play-store-badge">
+      <a href="https://play.google.com/store/apps/details?id=com.batako.universe&pcampaignid=web_share">
+        <img alt='Get it on Google Play' 
+             src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
       </a>
-
-      <a href="#" id="ios-btn" class="btn btn-secondary">
-        Download for iOS
-      </a>
-      
     </div>
 
-    <p style="color:var(--muted); font-size: 0.9rem; margin-top:24px;">
-      UniVerse is currently distributed directly as part of an early rollout.
-      Availability on the Google Play Store is planned for a later phase.
+    <div style="margin-top: 40px;">
+      <a href="#" id="ios-btn" class="btn btn-secondary">
+        Coming to iOS
+      </a>
+    </div>
+
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+    <p style="color:var(--muted); font-size: 0.85rem;">
+      Having trouble with the Play Store? 
+      <a href="downloads/universe-v1.apk" class="btn-apk">Download APK Directly</a>
     </p>
 
-    <p style="color:var(--muted); margin-top:12px; font-size:0.9rem; font-style: italic;">
-      Note: You may need to allow installation from "Unknown Sources" in your settings.
+    <p style="color:var(--muted); margin-top:12px; font-size:0.8rem; font-style: italic;">
+      Note: For the best experience and automatic updates, we recommend the Google Play version.
     </p>
   </div>
 
   <footer>
-    © 2025 UniVerse • Made with ❤️ in Nigeria
+    © 2026 UniVerse • Made with ❤️ in Nigeria
   </footer>
 
   <div id="toast">Coming to the App Store soon! 🍎</div>
@@ -83,21 +102,14 @@
     document.getElementById('hamburger').addEventListener('click', () =>
       document.getElementById('menu').classList.toggle('active')
     );
-    document.querySelectorAll('.menu a').forEach(a =>
-      a.addEventListener('click', () =>
-        document.getElementById('menu').classList.remove('active')
-      )
-    );
 
     // Toast Logic for iOS Button
     const iosBtn = document.getElementById('ios-btn');
     const toast = document.getElementById('toast');
 
     iosBtn.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevents the link from jumping to the top
-      toast.className = "show"; // Shows the toast
-      
-      // Hide it after 3 seconds
+      e.preventDefault();
+      toast.className = "show"; 
       setTimeout(function(){ 
         toast.className = toast.className.replace("show", ""); 
       }, 3000);
