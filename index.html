@@ -15,6 +15,37 @@
   <meta name="description" content="Connect, trade, and vibe with students across Nigeria. The ultimate campus app with stories, anonymous confessions, and a student wallet.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script type="text/javascript">
+  function tryToOpenApp() {
+    const path = window.location.pathname;
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // We only want to auto-redirect if they are on Android
+    if (/android/i.test(userAgent)) {
+      const packageName = "com.batako.universe";
+      
+      // If the user is just on the home page, don't force them to the store immediately
+      // But if they are clicking a deep link (profile, post, channel), force the redirect
+      if (path.length > 1 && path !== "/index.html") {
+        
+        // This 'intent' URL is the magic:
+        // 1. It tries to open the app via the https scheme
+        // 2. If app is missing, it sends them to the browser_fallback_url (Play Store)
+        const intentUrl = "intent://" + window.location.host + path + 
+                        "#Intent;scheme=https;package=" + packageName + 
+                        ";S.browser_fallback_url=" + 
+                        encodeURIComponent("https://play.google.com/store/apps/details?id=" + packageName) + 
+                        ";end";
+
+        window.location.href = intentUrl;
+      }
+    }
+  }
+
+  // Execute the redirect
+  tryToOpenApp();
+</script>
 </head>
 
 <body>
@@ -50,7 +81,7 @@
         </p>
         
       <div class="btn-group">
-  <a href="https://play.google.com/store/apps/details?id=com.batako.universe&pcampaignid=pcampaignid=web_share">
+  <a href="https://play.google.com/store/apps/details?id=com.batako.universe&pcampaignid=web_share">
     <img alt='Get it on Google Play' 
          src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' 
          style="width: 200px;"/>
