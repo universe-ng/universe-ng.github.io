@@ -13,19 +13,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UniVerse - Redirecting...</title>
 
-  <script type="text/javascript">
-  function handleDeepLinkAndRedirect() {
+<script type="text/javascript">
+  async function handleDeepLinkAndRedirect() {
     const path = window.location.pathname;
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     const packageName = "com.batako.universe";
 
-    // CHECK 1: If it's a deep link and on Android, try to open the App/Store
-    if (/android/i.test(userAgent)) {
-      const isDeepLink = path.includes('/post/') || 
-                         path.includes('/profile/') || 
-                         path.includes('/channel/');
+    // CHECK 1: Only run for Deep Links
+    const isDeepLink = path.includes('/post/') || 
+                       path.includes('/profile/') || 
+                       path.includes('/channel/');
 
-      if (isDeepLink) {
+    if (isDeepLink) {
+      // 🚀 NEW: Save the path to clipboard so the app can read it after install
+      try {
+        await navigator.clipboard.writeText("universe_path:" + path);
+      } catch (err) {
+        console.log("Clipboard skip"); // Some browsers might block this, but it's okay
+      }
+
+      // If Android, try to open App or Store
+      if (/android/i.test(userAgent)) {
         const intentUrl = "intent://" + window.location.host + path + 
                         "#Intent;scheme=https;package=" + packageName + 
                         ";S.browser_fallback_url=" + 
@@ -33,14 +41,16 @@
                         ";end";
         
         window.location.href = intentUrl;
-        return; // Stop here if we're redirecting to intent
+        return;
       }
     }
 
-    // CHECK 2: If we aren't redirecting to an app, send them to the home page
-    // but we do it via JS so it doesn't interrupt the deep link check
+    // Fallback to Home
     window.location.href = "/";
   }
+
+  handleDeepLinkAndRedirect();
+</script>
 
   handleDeepLinkAndRedirect();
 </script>
