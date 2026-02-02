@@ -21,17 +21,16 @@
     const path = window.location.pathname;
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // We only want to auto-redirect if they are on Android
+    // Only auto-redirect on Android
     if (/android/i.test(userAgent)) {
       const packageName = "com.batako.universe";
       
-      // If the user is just on the home page, don't force them to the store immediately
-      // But if they are clicking a deep link (profile, post, channel), force the redirect
-      if (path.length > 1 && path !== "/index.html") {
-        
-        // This 'intent' URL is the magic:
-        // 1. It tries to open the app via the https scheme
-        // 2. If app is missing, it sends them to the browser_fallback_url (Play Store)
+      // List of paths that SHOULD trigger a redirect
+      const isDeepLink = path.includes('/post/') || 
+                         path.includes('/profile/') || 
+                         path.includes('/channel/');
+
+      if (isDeepLink) {
         const intentUrl = "intent://" + window.location.host + path + 
                         "#Intent;scheme=https;package=" + packageName + 
                         ";S.browser_fallback_url=" + 
@@ -42,8 +41,6 @@
       }
     }
   }
-
-  // Execute the redirect
   tryToOpenApp();
 </script>
 </head>
