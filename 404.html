@@ -1,9 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/" />
-    <title>Redirecting...</title>
-  </head>
-  <body></body>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ904VQFK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MJ904VQFK0');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniVerse - Redirecting...</title>
+
+  <script type="text/javascript">
+  function handleDeepLinkAndRedirect() {
+    const path = window.location.pathname;
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const packageName = "com.batako.universe";
+
+    // CHECK 1: If it's a deep link and on Android, try to open the App/Store
+    if (/android/i.test(userAgent)) {
+      const isDeepLink = path.includes('/post/') || 
+                         path.includes('/profile/') || 
+                         path.includes('/channel/');
+
+      if (isDeepLink) {
+        const intentUrl = "intent://" + window.location.host + path + 
+                        "#Intent;scheme=https;package=" + packageName + 
+                        ";S.browser_fallback_url=" + 
+                        encodeURIComponent("https://play.google.com/store/apps/details?id=" + packageName) + 
+                        ";end";
+        
+        window.location.href = intentUrl;
+        return; // Stop here if we're redirecting to intent
+      }
+    }
+
+    // CHECK 2: If we aren't redirecting to an app, send them to the home page
+    // but we do it via JS so it doesn't interrupt the deep link check
+    window.location.href = "/";
+  }
+
+  handleDeepLinkAndRedirect();
+</script>
+</head>
+<body>
+  <p style="text-align:center; margin-top:50px; font-family:sans-serif;">
+    Opening UniVerse...
+  </p>
+</body>
 </html>
