@@ -32,7 +32,8 @@
 
       const isDeepLink = path.includes('/post/') || 
                          path.includes('/profile/') || 
-                         path.includes('/channel/');
+                         path.includes('/channel/') ||
+                         path.includes('/reel/');
 
       if (isDeepLink) {
         try {
