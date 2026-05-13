@@ -46,7 +46,10 @@
       // List of paths that SHOULD trigger a redirect
       const isDeepLink = path.includes('/post/') || 
                          path.includes('/profile/') || 
-                         path.includes('/channel/');
+                         path.includes('/channel/') ||
+                         path.includes('/reel/') ||
+                         path.includes('/marketplace/') ||
+                         path.includes('/refer/');
 
       if (isDeepLink) {
         const intentUrl = "intent://" + window.location.host + path + 
@@ -120,7 +123,7 @@
       <div class="feature-text">
         <h3>Campus Centered Feed</h3>
         <p>No more noise. Content is organized around your specific university. 
-           See what's happening at UDUS, BUK, your campus right now. more universities are coming soon</p>
+           See what's happening at UDUS, BUK, ABU, UNILAG, UNIPORT, and UNILORI your campus right now. more universities are coming soon</p>
       </div>
       <div class="feature-img">
         <img src="img/feed.webp" alt="Campus Feed">
@@ -149,6 +152,56 @@
       </div>
     </div>
 
+    <div class="feature-row">
+      <div class="feature-text">
+        <h3>Post, Engage & Earn</h3>
+        <p>Introducing <b>Reels</b>! Share your talent and get paid in UniCoins every Monday based on your engagement. Use your earnings to <b>buy airtime</b> directly in the app.</p>
+      </div>
+      <div class="feature-img">
+        <img src="img/reels.webp" alt="UniVerse Reels">
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <h3>Trinity AI Companion</h3>
+        <p>Chat with <b>Trinity AI</b> for instant help or summon it in any reply by tagging <b>@trinity</b>. <i>(Exclusive feature for verified badge holders).</i></p>
+      </div>
+      <div class="feature-img">
+        <img src="img/trinity-ai.webp" alt="Trinity AI" style="max-width: 150px; opacity: 0.8;">
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <h3>Campus Marketplace</h3>
+        <p>Buy and sell goods or services safely within your university. From textbooks to gadgets, find everything you need in the <b>Marketplace</b>.</p>
+      </div>
+      <div class="feature-img">
+        <img src="img/logo/universe-logo.png" alt="Marketplace Feature" onerror="this.src='img/profile.webp'"> [cite: 18]
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <h3>2-Minute Stories & Global Feed</h3>
+        <p>Share longer moments with <b>2-minute Stories</b> that stay up for 24 hours. Switch to the <b>Global Feed</b> to see what's happening at every university nationwide.</p>
+      </div>
+      <div class="feature-img">
+        <img src="img/stories.webp" alt="Stories Feature">
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <h3>Go Anonymous</h3>
+        <p>Sometimes you need to speak freely. Use our optional anonymity feature to share confessions or discuss sensitive topics securely.</p> [cite: 20]
+      </div>
+      <div class="feature-img">
+        <img src="img/anonymous.webp" alt="Anonymous Mode" onerror="this.src='img/logo/universe-logo.png'"> [cite: 20]
+      </div>
+    </div>
+
     <div class="feature-row reverse">
       <div class="feature-text">
         <h3>Build Your Identity</h3>
@@ -158,19 +211,6 @@
       <div class="feature-img">
         <img src="img/profile.webp" alt="User Profile Interface">
       </div>
-    </div>
-
-   <div class="feature-row">
-      <div class="feature-text">
-        <h3>Go Anonymous</h3>
-        <p>Sometimes you need to speak freely. Use our optional anonymity 
-           feature to share confessions or discuss sensitive topics securely 
-           without revealing your identity.</p>
-      </div>
-      <div class="feature-img">
-        <img src="img/anonymous.webp" alt="Anonymous Mode" onerror="this.src='img/logo/universe-logo.png'">
-      </div>
-    </div>
     </div>
 
   </section>
